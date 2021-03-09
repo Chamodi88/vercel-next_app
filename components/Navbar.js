@@ -39,6 +39,15 @@ export default function Navbar() {
             </Link>
           </li>
         )}
+
+         {/* user is not signed OR has not created username */}
+         {username && (
+          <li>
+            <Link href="/enter">
+              <button className="btn-blue">Sign out</button>
+            </Link>
+          </li>
+        )}
       </ul>
     </nav>
   );
